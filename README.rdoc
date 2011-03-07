@@ -1,6 +1,6 @@
-= Ryan Bates Dot Files
+= Ryan Bates Dot Files - Modified
 
-These are config files to set up a system the way I like it.
+I have taken the original dot files Ryan Bates created(thank you very much!) and configured them for the way I set up a system.  I've modified only a few basic entries currently.
 
 
 == Installation
