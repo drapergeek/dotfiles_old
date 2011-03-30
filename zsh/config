@@ -1,7 +1,7 @@
 if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~$(git_info_for_prompt)%# '
+  export PS1='%t-%m:%3~$(git_info_for_prompt)%# '
 else
-  export PS1='%3~$(git_info_for_prompt)%# '
+  export PS1='%t-%3~$(git_info_for_prompt)%# '
 fi
 
 export EDITOR='mate_wait'
@@ -9,6 +9,7 @@ export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/lo
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 fpath=(~/.zsh/functions $fpath)
+
 
 autoload -U ~/.zsh/functions/*(:t)
 
