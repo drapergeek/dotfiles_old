@@ -44,6 +44,7 @@ if has("autocmd")
 
   " Enable soft-wrapping for text files
   autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
+  autocmd BufNewFile,BufRead *.mobile.erb let b:eruby_subtype = 'html'
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
@@ -169,6 +170,7 @@ endif
 " Color scheme
 set background=dark
 colorscheme vividchalk 
+"colorscheme github 
 
 " highlight NonText guibg=#060606
 " highlight Folded  guibg=#0A0A0A guifg=#9090D0
