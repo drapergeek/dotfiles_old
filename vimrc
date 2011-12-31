@@ -46,6 +46,9 @@ if has("autocmd")
   autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
   autocmd BufNewFile,BufRead *.mobile.erb let b:eruby_subtype = 'html'
 
+  " Snipmate needs to know that html.erb is ruby
+  autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
+
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
   au!
@@ -93,6 +96,10 @@ let mapleader = ","
 
 " Edit the README_FOR_APP (makes :R commands work)
 map <Leader>R :e doc/README_FOR_APP<CR>
+
+"Fun stuff
+vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+
 
 " Leader shortcuts for Rails commands
 map <Leader>m :Rmodel 
