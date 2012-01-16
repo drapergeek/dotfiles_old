@@ -42,6 +42,10 @@ snippet if
 	if ${1:condition}
 		${2}
 	end
+snippet it
+	it "${1:scenario}" do
+		${2:code...}
+	end
 snippet ife
 	if ${1:condition}
 		${2}
@@ -422,3 +426,5 @@ snippet tas
 	task :${2:task_name => [:dependent, :tasks]} do
 		${3}
 	end
+
+

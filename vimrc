@@ -48,6 +48,7 @@ if has("autocmd")
 
   " Snipmate needs to know that html.erb is ruby
   autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
+  autocmd BufNewFile,BufRead *.mobile.erb set filetype=html.eruby
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
