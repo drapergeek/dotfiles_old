@@ -1,0 +1,9 @@
+[submodule "vim/bundles/coffee-script"]
+	path = vim/bundles/coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundles/vim-rails"]
+	path = vim/bundles/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git

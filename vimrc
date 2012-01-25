@@ -119,7 +119,7 @@ map <Leader>sv :RSview
 map <Leader>su :RSunittest 
 map <Leader>sf :RSfunctionaltest 
 
-map <leader>t :FuzzyFinderTextMate<CR>
+map <leader>t :CtrlP<CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
@@ -177,8 +177,11 @@ endif
 
 " Color scheme
 set background=dark
-colorscheme vividchalk 
+"colorscheme vibrantink 
 "colorscheme github 
+"colorscheme railscasts 
+"colorscheme solarized
+colorscheme jellybeans
 
 " highlight NonText guibg=#060606
 " highlight Folded  guibg=#0A0A0A guifg=#9090D0
@@ -220,3 +223,11 @@ function! OpenURL()
   endif
 endfunction
 map <Leader>w :call OpenURL()<CR>
+
+"pathogen
+call pathogen#infect() 
+
+
+"Open nerd tree by default
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
