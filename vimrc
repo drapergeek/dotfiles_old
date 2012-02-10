@@ -1,4 +1,3 @@
-" based on http://github.com/jferris/config_files/blob/master/vimrc
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -118,11 +117,13 @@ map <Leader>sc :RScontroller
 map <Leader>sv :RSview 
 map <Leader>su :RSunittest 
 map <Leader>sf :RSfunctionaltest 
-
 map <leader>t :CtrlP<CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
+
+"Switch between last file
+map ,, <C-^>
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
@@ -159,7 +160,7 @@ imap <Tab> <C-N>
 imap <C-L> <Space>=><Space>
 
 " Display extra whitespace
-" set list listchars=tab:»·,trail:·
+set list listchars=tab:»·,trail:·
 
 " Edit routes
 command! Rroutes :e config/routes.rb
@@ -177,11 +178,11 @@ endif
 
 " Color scheme
 set background=dark
-"colorscheme vibrantink 
-"colorscheme github 
-"colorscheme railscasts 
+colorscheme vibrantink
+"colorscheme github
+"colorscheme railscasts
 "colorscheme solarized
-colorscheme jellybeans
+"colorscheme jellybeans
 
 " highlight NonText guibg=#060606
 " highlight Folded  guibg=#0A0A0A guifg=#9090D0
@@ -209,7 +210,11 @@ set smartcase
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 set tags=./tags;
 
-let g:fuf_splitPathMatching=1
+
+" Treat <li> and <p> tags like the block tags they are
+ let g:html_indent_tags = 'li\|p'
+
+"let g:fuf_splitPathMatching=1
 
 " Open URL
 command -bar -nargs=1 OpenURL :!open <args>
@@ -229,5 +234,11 @@ call pathogen#infect()
 
 
 "Open nerd tree by default
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+"autocmd VimEnter * NERDTree
+"autocmd VimEnter * wincmd p
+"
+
+
+"Maps f5 in insert and non insert to indent properly all the code
+map   <silent> <F5> mmgg=G'm
+imap  <silent> <F5> <Esc> mmgg=G'm
