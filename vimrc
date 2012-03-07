@@ -1,4 +1,3 @@
-
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -8,17 +7,15 @@ set backspace=indent,eol,start
 
 set nobackup
 set nowritebackup
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+set history=50    "keep 50 lines of command line history
+set ruler         "show the cursor position all the time
+set showcmd       "display incomplete commands
+set incsearch     " do incremental searching
+set laststatus    "always display the status line
 
 " Don't use Ex mode, use Q for formatting
-map Q gq
+"map Q gq
 
-" This is an alternative that also works in block mode, but the deleted
-" text is lost and it only works for putting the current register.
-"vnoremap p "_dp
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -30,66 +27,28 @@ endif
 " Switch wrap off for everything
 set nowrap
 
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
+filetype plugin indent on
 
-  " Set File type to 'text' for files ending in .txt
-  autocmd BufNewFile,BufRead *.txt setfiletype text
-
-  " Enable soft-wrapping for text files
-  autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
-  autocmd BufNewFile,BufRead *.mobile.erb let b:eruby_subtype = 'html'
-
-  " Snipmate needs to know that html.erb is ruby
-  autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
-  autocmd BufNewFile,BufRead *.mobile.erb set filetype=html.eruby
-
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
+augroup vimrcEx
   au!
 
   " For all text files set 'textwidth' to 78 characters.
-  " autocmd FileType text setlocal textwidth=78
-
+  autocmd FileType text setlocal textwidth=78
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
   " (happens when dropping a file on gvim).
   autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal g`\"" |
+     \ endif
 
-  " Automatically load .vimrc source when saved
-  autocmd BufWritePost .vimrc source $MYVIMRC
+augroup END
 
-  augroup END
-
-else
-
-  set autoindent		" always set autoindenting on
-
-endif " has("autocmd")
-
-" if has("folding")
-  " set foldenable
-  " set foldmethod=syntax
-  " set foldlevel=1
-  " set foldnestmax=2
-  " set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
-" endif
 
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
 set expandtab
-
-" Always display the status line
-set laststatus=2
 
 " \ is the leader character
 let mapleader = ","
@@ -212,22 +171,21 @@ set tags=./tags;
 
 
 " Treat <li> and <p> tags like the block tags they are
- let g:html_indent_tags = 'li\|p'
+let g:html_indent_tags = 'li\|p'
 
-"let g:fuf_splitPathMatching=1
 
 " Open URL
-command -bar -nargs=1 OpenURL :!open <args>
-function! OpenURL()
-  let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;:]*')
-  echo s:uri
-  if s:uri != ""
-	  exec "!open \"" . s:uri . "\""
-  else
-	  echo "No URI found in line."
-  endif
-endfunction
-map <Leader>w :call OpenURL()<CR>
+"command -bar -nargs=1 OpenURL :!open <args>
+"function! OpenURL()
+"  let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;:]*')
+"  echo s:uri
+"  if s:uri != ""
+"    exec "!open \"" . s:uri . "\""
+"  else
+"    echo "No URI found in line."
+"  endif
+"endfunction
+"map <Leader>w :call OpenURL()<CR>
 
 "pathogen
 call pathogen#infect() 
