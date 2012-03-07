@@ -36,3 +36,5 @@ alias b='bundle exec'
 
 # commands starting with % for pasting from web
 alias %=' '
+
+alias tagit='/usr/local/Cellar/ctags/5.8/bin/ctags -R --exclude=.git --exclude=log *'

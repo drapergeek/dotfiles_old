@@ -56,7 +56,7 @@ let mapleader = ","
 " Edit the README_FOR_APP (makes :R commands work)
 map <Leader>R :e doc/README_FOR_APP<CR>
 
-"Fun stuff
+"Git Blame Check
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
 
@@ -64,7 +64,7 @@ vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'
 map <Leader>m :Rmodel 
 map <Leader>c :Rcontroller 
 map <Leader>v :Rview 
-map <Leader>u :Runittest 
+map <Leader>u :Runittest<CR>
 map <Leader>f :Rfunctionaltest 
 map <Leader>tm :RTmodel 
 map <Leader>tc :RTcontroller 
@@ -76,7 +76,12 @@ map <Leader>sc :RScontroller
 map <Leader>sv :RSview 
 map <Leader>su :RSunittest 
 map <Leader>sf :RSfunctionaltest 
+"Ctrlp to search for files
 map <leader>t :CtrlP<CR>
+"map over the tcomment command
+map <leader>cc :TComment<CR>
+"This does tcomment for html
+map <leader>ch :TCommentAs html<CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
@@ -131,9 +136,8 @@ if filereadable(".vimrc.local")
 endif
 
 " Use Ack instead of Grep when available
-if executable("ack")
-  set grepprg=ack\ -H\ --nogroup\ --nocolor\ --ignore-dir=tmp\ --ignore-dir=coverage
-endif
+  "set grepprg=ack\ -H\ --nogroup\ --nocolor\ --ignore-dir=tmp\ --ignore-dir=coverage
+  set grepprg=ack
 
 " Color scheme
 set background=dark
