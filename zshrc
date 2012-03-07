@@ -11,18 +11,21 @@ export PATH='/usr/local/bin:/Users/gdraper/bin:/Users/gdraper/.bin:/usr/local/ho
 #rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
 
+#common directories
+setopt auto_cd
+cdpath=($HOME/Development $HOME/Dropbox/code)
 #open new terminals in current directory
-export CURRENT_PROJECT_PATH=$HOME/.current-project
+#export CURRENT_PROJECT_PATH=$HOME/.current-project
 
-function chpwd {
-  echo $(pwd) >! $CURRENT_PROJECT_PATH
-}
+#function chpwd {
+#  echo $(pwd) >! $CURRENT_PROJECT_PATH
+#}
 
-current() {
-    if [[ -f $CURRENT_PROJECT_PATH ]]; then
-          cd "$(cat $CURRENT_PROJECT_PATH)"
-            fi
-          }
+#current() {
+#    if [[ -f $CURRENT_PROJECT_PATH ]]; then
+#          cd "$(cat $CURRENT_PROJECT_PATH)"
+#            fi
+#          }
 
-current
+#current
 #end opening current directory
