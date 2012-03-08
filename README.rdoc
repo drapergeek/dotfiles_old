@@ -4,3 +4,7 @@
   cd ~/.dotfiles
   rake install
   chsh -s /bin/zsh
+  #Vim plugins are often submodules
+  (in the dotfiles root)
+  git submodule init
+  git submodule update
