@@ -12,6 +12,7 @@ set ruler         "show the cursor position all the time
 set showcmd       "display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2   "always display the status line
+set wrap
 
 " Don't use Ex mode, use Q for formatting
 "map Q gq
@@ -147,8 +148,8 @@ colorscheme vibrantink
 "colorscheme solarized
 "colorscheme jellybeans
 
-" highlight NonText guibg=#060606
-" highlight Folded  guibg=#0A0A0A guifg=#9090D0
+"highlight NonText guibg=#060606
+"highlight Folded  guibg=#0A0A0A guifg=#9090D0
 set t_Co=256
 
 
