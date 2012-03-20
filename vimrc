@@ -205,3 +205,6 @@ call pathogen#infect()
 "Maps f5 in insert and non insert to indent properly all the code
 map   <silent> <F5> mmgg=G'm
 imap  <silent> <F5> <Esc> mmgg=G'm
+
+"Mapping to be able to copy and paste:
+set clipboard=unnamed
