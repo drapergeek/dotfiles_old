@@ -14,10 +14,6 @@ set incsearch     " do incremental searching
 set laststatus=2   "always display the status line
 set wrap
 
-" Don't use Ex mode, use Q for formatting
-"map Q gq
-
-
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
@@ -53,9 +49,6 @@ set expandtab
 
 " \ is the leader character
 let mapleader = ","
-
-" Edit the README_FOR_APP (makes :R commands work)
-map <Leader>R :e doc/README_FOR_APP<CR>
 
 "Git Blame Check
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
@@ -194,13 +187,6 @@ let g:html_indent_tags = 'li\|p'
 
 "pathogen
 call pathogen#infect() 
-
-
-"Open nerd tree by default
-"autocmd VimEnter * NERDTree
-"autocmd VimEnter * wincmd p
-"
-
 
 "Maps f5 in insert and non insert to indent properly all the code
 map   <silent> <F5> mmgg=G'm

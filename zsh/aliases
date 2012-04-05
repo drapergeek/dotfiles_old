@@ -32,6 +32,8 @@ alias tlog='tail -f log/development.log'
 alias scaffold='script/generate nifty_scaffold'
 alias rst='touch tmp/restart.txt'
 
+alias rdb='rake db:migrate && rake db:migrate:redo && rake db:test:prepare'
+
 alias b='bundle exec'
 
 # commands starting with % for pasting from web
