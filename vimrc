@@ -53,7 +53,6 @@ let mapleader = ","
 "Git Blame Check
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
-
 " Leader shortcuts for Rails commands
 map <Leader>m :Rmodel 
 map <Leader>c :Rcontroller 
@@ -70,10 +69,16 @@ map <Leader>sc :RScontroller
 map <Leader>sv :RSview 
 map <Leader>su :RSunittest 
 map <Leader>sf :RSfunctionaltest 
+" Edit routes
+command! Rroutes :e config/routes.rb
+command! Rschema :e db/schema.rb
+
 "Ctrlp to search for files
 map <leader>t :CtrlP<CR>
+
 "map over the tcomment command
 map <leader>cc :TComment<CR>
+
 "This does tcomment for html
 map <leader>ch :TCommentAs html<CR>
 
@@ -120,9 +125,6 @@ imap <C-L> <Space>=><Space>
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
-" Edit routes
-command! Rroutes :e config/routes.rb
-command! Rschema :e db/schema.rb
 
 " Local config
 if filereadable(".vimrc.local")
@@ -194,3 +196,4 @@ imap  <silent> <F5> <Esc> mmgg=G'm
 
 "Mapping to be able to copy and paste:
 set clipboard=unnamed
+
