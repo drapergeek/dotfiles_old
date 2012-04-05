@@ -50,63 +50,9 @@ set expandtab
 " \ is the leader character
 let mapleader = ","
 
-"Git Blame Check
-vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
-
-" Leader shortcuts for Rails commands
-map <Leader>m :Rmodel 
-map <Leader>c :Rcontroller 
-map <Leader>v :Rview 
-map <Leader>u :Runittest<CR>
-map <Leader>f :Rfunctionaltest 
-map <Leader>tm :RTmodel 
-map <Leader>tc :RTcontroller 
-map <Leader>tv :RTview 
-map <Leader>tu :RTunittest 
-map <Leader>tf :RTfunctionaltest 
-map <Leader>sm :RSmodel 
-map <Leader>sc :RScontroller 
-map <Leader>sv :RSview 
-map <Leader>su :RSunittest 
-map <Leader>sf :RSfunctionaltest 
-" Edit routes
-command! Rroutes :e config/routes.rb
-command! Rschema :e db/schema.rb
-
-"Ctrlp to search for files
-map <leader>t :CtrlP<CR>
-
-"map over the tcomment command
-map <leader>cc :TComment<CR>
-
-"This does tcomment for html
-map <leader>ch :TCommentAs html<CR>
-
-" Hide search highlighting
-map <Leader>h :set invhls <CR>
-
-"Switch between last file
-map ,, <C-^>
-
-" Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
-" Duplicate a selection
-" Visual mode: D
-vmap D y'>p
-
-" Press Shift+P while in visual mode to replace the selection without
-" overwriting the default register
-vmap P p :call setreg('"', getreg('0')) <CR>
+"Bring in the shortcuts
+source $HOME/.vim/shortcuts/rails.vim
+source $HOME/.vim/shortcuts/other.vim
 
 " For Haml
 au! BufRead,BufNewFile *.haml         setfiletype haml
@@ -119,12 +65,10 @@ imap <C-F> <C-R>=expand("%")<CR>
 
 " Maps autocomplete to tab
 imap <Tab> <C-N>
-
 imap <C-L> <Space>=><Space>
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
-
 
 " Local config
 if filereadable(".vimrc.local")
@@ -147,7 +91,6 @@ colorscheme vibrantink
 "highlight Folded  guibg=#0A0A0A guifg=#9090D0
 set t_Co=256
 
-
 " Numbers
 set number
 set numberwidth=5
@@ -169,10 +112,8 @@ set smartcase
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 set tags=./tags;
 
-
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
-
 
 " Open URL
 "command -bar -nargs=1 OpenURL :!open <args>
@@ -189,10 +130,6 @@ let g:html_indent_tags = 'li\|p'
 
 "pathogen
 call pathogen#infect() 
-
-"Maps f5 in insert and non insert to indent properly all the code
-map   <silent> <F5> mmgg=G'm
-imap  <silent> <F5> <Esc> mmgg=G'm
 
 "Mapping to be able to copy and paste:
 set clipboard=unnamed
