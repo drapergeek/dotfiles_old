@@ -81,11 +81,8 @@ endif
 
 " Color scheme
 set background=dark
-colorscheme vibrantink
-"colorscheme github
-"colorscheme railscasts
-"colorscheme solarized
-"colorscheme jellybeans
+"colorscheme vibrantink
+colorscheme Tomorrow-Night
 
 "highlight NonText guibg=#060606
 "highlight Folded  guibg=#0A0A0A guifg=#9090D0
