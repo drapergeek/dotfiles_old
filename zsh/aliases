@@ -44,6 +44,6 @@ alias tagit='/usr/local/Cellar/ctags/5.8/bin/ctags -R --exclude=.git --exclude=l
 #tmux
 alias tls='tmux ls'
 alias tn='tmux new -s'
-alias ta='tmux new -t'
+alias ta='tmux attach -t'
 
 

@@ -81,8 +81,7 @@ endif
 
 " Color scheme
 set background=dark
-"colorscheme vibrantink
-colorscheme Tomorrow-Night-Bright
+colorscheme vibrantink
 
 "highlight NonText guibg=#060606
 "highlight Folded  guibg=#0A0A0A guifg=#9090D0
@@ -130,4 +129,7 @@ call pathogen#infect()
 
 "Mapping to be able to copy and paste:
 set clipboard=unnamed
+
+"show the 80 char line
+"set colorcolumn=100
 
