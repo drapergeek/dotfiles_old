@@ -33,10 +33,17 @@ alias scaffold='script/generate nifty_scaffold'
 alias rst='touch tmp/restart.txt'
 
 alias rdb='rake db:migrate && rake db:migrate:redo && rake db:test:prepare'
-
 alias b='bundle exec'
+
 
 # commands starting with % for pasting from web
 alias %=' '
 
 alias tagit='/usr/local/Cellar/ctags/5.8/bin/ctags -R --exclude=.git --exclude=log *'
+
+#tmux
+alias tls='tmux ls'
+alias tn='tmux new -s'
+alias ta='tmux new -t'
+
+
