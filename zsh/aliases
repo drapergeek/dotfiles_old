@@ -1,12 +1,3 @@
-# cd
-alias ..='cd ..'
-
-# ls
-alias ls="ls -F"
-alias l="ls -lAh"
-alias ll="ls -l"
-alias la='ls -A'
-
 # git
 alias gl='git pull'
 alias gp='git push'
@@ -19,25 +10,13 @@ alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 
-
 #vim
 alias v='/Applications/MacVim.app/Contents/MacOS/Vim'
 
-# rails
-alias sc='script/console'
-alias ss='script/server'
-alias sg='script/generate'
-alias a='autotest -rails'
-alias tlog='tail -f log/development.log'
-alias scaffold='script/generate nifty_scaffold'
-alias rst='touch tmp/restart.txt'
 
+#rails
 alias rdb='rake db:migrate && rake db:migrate:redo && rake db:test:prepare'
 alias b='bundle exec'
-
-
-# commands starting with % for pasting from web
-alias %=' '
 
 alias tagit='/usr/local/Cellar/ctags/5.8/bin/ctags -R --exclude=.git --exclude=log *'
 
@@ -45,5 +24,3 @@ alias tagit='/usr/local/Cellar/ctags/5.8/bin/ctags -R --exclude=.git --exclude=l
 alias tls='tmux ls'
 alias tn='tmux new -s'
 alias ta='tmux attach -t'
-
-
