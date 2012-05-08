@@ -1,5 +1,5 @@
 "Ctrlp to search for files
-map <leader>t :CtrlP<CR>
+map <leader>t :CommandT<CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
