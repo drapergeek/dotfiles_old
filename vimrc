@@ -81,7 +81,9 @@ endif
 
 " Color scheme
 set background=dark
-colorscheme vibrantink
+colorscheme solarized
+"colorscheme wombat
+"colorscheme vibrantchalk
 
 "highlight NonText guibg=#060606
 "highlight Folded  guibg=#0A0A0A guifg=#9090D0
