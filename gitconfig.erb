@@ -3,6 +3,31 @@
 	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [alias]
 	co = checkout
+  st = status -sb
+  co = checkout
+  msg = commit --allow-empty -m
+ # Pretty!
+ # via http://andyjeffries.co.uk/articles/25-tips-for-intermediate-git-users
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
+  unstage = reset HEAD
+  done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && bundle exec rake && git push
+  # Merge current branch into master, only if it's a fast-forward. Doesn't check
+  # out master if it's not a FF merge.
+  mm = !test `git rev-parse master` = $(git merge-base HEAD master) && git checkout master && git merge HEAD@{1} || echo "Non-fastforward"
+  up = !git fetch origin && git rebase origin/master
+  aa = add .
+  # Not yet added - doesn't include ignored files
+  new = ls-files --others --exclude-standard
+  # Files that are in the staging area
+  added = diff --cached --name-only
+  today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+  plre = pull --rebase
+  ff = merge --ff-only
+  newauthor = commit --amend --reset-author -C HEAD
+  prune-remotes = remote prune origin
+  next = !git add . && git rebase --continue
+  # Typos
+  pul = pull
 [color]
 	diff = auto
 	status = auto

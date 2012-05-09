@@ -24,3 +24,29 @@ alias tagit='/usr/local/Cellar/ctags/5.8/bin/ctags -R --exclude=.git --exclude=l
 alias tls='tmux ls'
 alias tn='tmux new -s'
 alias ta='tmux attach -t'
+
+
+
+#git
+function g {
+  if [[ $# > 0 ]]; then
+    git $@
+  else
+    git st
+  fi
+}
+compdef g=git
+alias gp="bundle exec rake && git push"
+alias gci="git pull --rebase && brake && git push"
+alias gcl="git clone"
+alias gd="git diff"
+alias gg="git grep"
+alias amend="git commit --amend"
+
+alias ga="git add"
+alias gai="git add --interactive"
+
+alias gb="git checkout -b"
+alias gc="git checkout"
+alias gs="git st" # Use my alias from ~/.gitconfig
+alias gcm="git commit -m"
