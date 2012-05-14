@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/training/Dropbox/code/dotfiles'
+let g:netrw_dirhist_2='/Users/training/Dropbox/code/dotfiles/vim/bundle/commandt'
+let g:netrw_dirhist_3='/Users/training/Dropbox/code/dotfiles'
+let g:netrw_dirhist_4='/Users/training/Dropbox/code/findit'
+let g:netrw_dirhist_5='/Users/training/Dropbox/code/dotfiles'
+let g:netrw_dirhist_6='/Users/training/Dropbox/code/dotfiles/zsh'
+let g:netrw_dirhist_7='/Users/training/tmp/dotfiles/zsh/completion-scripts'
+let g:netrw_dirhist_8='/Users/training/Dropbox/code/findit'

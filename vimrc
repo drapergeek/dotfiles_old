@@ -135,3 +135,5 @@ set clipboard=unnamed
 "show the 80 char line
 "set colorcolumn=100
 
+"commandt
+let g:CommandTMatchWindowReverse = 1
