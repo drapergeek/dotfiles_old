@@ -1,5 +1,5 @@
 "Ctrlp to search for files
-map <leader>t :CommandT<CR>
+map <leader>t :CtrlP<CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
@@ -26,4 +26,4 @@ vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'
 
 map <leader>p= :Tabularize /=<CR>
 map <leader>p- :Tabularize /=><CR>
-
+map <leader>p- :Tabularize /\|<CR>

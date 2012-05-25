@@ -53,6 +53,8 @@ let mapleader = ","
 "Bring in the shortcuts
 source $HOME/.vim/shortcuts/rails.vim
 source $HOME/.vim/shortcuts/other.vim
+source $HOME/.vim/syntax/tabularizing.vim
+source $HOME/.vim/functions.vim
 
 " For Haml
 au! BufRead,BufNewFile *.haml         setfiletype haml
