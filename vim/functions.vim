@@ -4,7 +4,7 @@ nnoremap <Leader>l :call RunCurrentLineInTest()<CR>
 function! CorrectTestRunner()
   if match(expand('%'), '_spec\.rb$') != -1
     return "rspec --drb"
-  elseif match(expand('%:p'), 'spec/acceptance\|features') != -1
+  elseif match(expand('%:p'), 'spec/\(acceptance\|features\)/') != -1
     " Turnip
     return "rspec -r turnip --drb"
   elseif match(expand('%'), '\.feature$') != -1
