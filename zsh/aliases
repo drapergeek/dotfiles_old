@@ -1,3 +1,5 @@
+# ls with colors
+alias ls='ls -G'
 # git
 alias gl='git pull'
 alias gp='git push'

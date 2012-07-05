@@ -83,7 +83,7 @@ endif
 
 " Color scheme
 set background=dark
-colorscheme solarized
+colorscheme jellybeans
 "colorscheme wombat
 "colorscheme vibrantchalk
 
