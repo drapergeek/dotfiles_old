@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/draper/Dropbox/Development/dotfiles'
+let g:netrw_dirhist_2='/Users/draper/Dropbox/Development/sched.do'
+let g:netrw_dirhist_3='/Users/draper/Dropbox/Development/checkin'
+let g:netrw_dirhist_4='/Users/draper/Dropbox/Development/sched.do'
+let g:netrw_dirhist_5='/Users/draper/Dropbox/Development/suspenders'
+let g:netrw_dirhist_6='/Users/draper/Dropbox/Development/password_expiration_reminder'
