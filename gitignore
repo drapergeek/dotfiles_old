@@ -22,3 +22,5 @@ vim/bundle/Command-T/ruby/command-t/*.o
 
 #bundle install --binstubs=bundler_binstubs
 bundler_binstubs/
+
+tags
