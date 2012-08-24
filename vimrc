@@ -24,7 +24,36 @@ endif
 " Switch wrap off for everything
 set nowrap
 
-filetype plugin indent on
+"VUNDLE!!
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+
+"My Bundles
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-rails'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-endwise'
+Bundle 'pangloss/vim-javascript'
+Bundle 'tsaleh/vim-supertab'
+Bundle 'danro/rename.vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'jgdavey/tslime.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'tomtom/tcomment_vim'
+
+
+
+
+"END VUNDLE!!
+filetype plugin indent on 
 
 augroup vimrcEx
   au!
