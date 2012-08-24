@@ -128,9 +128,6 @@ let g:html_indent_tags = 'li\|p'
 "endfunction
 "map <Leader>w :call OpenURL()<CR>
 
-"pathogen
-call pathogen#infect() 
-
 "Mapping to be able to copy and paste:
 set clipboard=unnamed
 
