@@ -15,3 +15,6 @@ export PATH='/usr/local/bin:/usr/local/bin:/Users/gdraper/bin:/Users/gdraper/.bi
 
 # RVM
 [[ -s '/Users/draper/.rvm/scripts/rvm' ]] && source '/Users/draper/.rvm/scripts/rvm'
+
+#for zsh-complettions
+fpath=(/usr/local/share/zsh-completions $fpath)
