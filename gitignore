@@ -2,6 +2,7 @@
 .svn
 .*.swp
 *.un~
+.rbenv
 
 # Vim undodir
 vim/undodir
