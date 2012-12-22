@@ -1,5 +1,7 @@
 nnoremap <Leader>a :call RunCurrentTest()<CR>
 nnoremap <Leader>l :call RunCurrentLineInTest()<CR>
+"run the last command again in tmux
+nnoremap <Leader>rr :call Send_to_Tmux("clear\n!-2\n\n")<CR>
 
 function! CorrectTestRunner()
   if match(expand('%'), '_spec\.rb$') != -1

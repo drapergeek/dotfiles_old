@@ -1,0 +1,3 @@
+[submodule "vim/plugin/greplace.vim"]
+	path = vim/plugin/greplace.vim
+	url = git://github.com/skwp/greplace.vim.git

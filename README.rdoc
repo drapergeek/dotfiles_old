@@ -10,5 +10,4 @@
   git submodule update
   #need to set up commandt
   cd vim/bundle/commandt
-  rvm use system
   rake make

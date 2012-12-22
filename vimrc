@@ -7,6 +7,7 @@ set backspace=indent,eol,start
 
 set nobackup
 set nowritebackup
+set noswapfile 
 set history=50    "keep 50 lines of command line history
 set ruler         "show the cursor position all the time
 set showcmd       "display incomplete commands
@@ -64,9 +65,9 @@ augroup vimrcEx
   " Don't do it when the position is invalid or when inside an event handler
   " (happens when dropping a file on gvim).
   autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal g`\"" |
-     \ endif
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \   exe "normal g`\"" |
+        \ endif
 
 augroup END
 
@@ -107,8 +108,8 @@ if filereadable(".vimrc.local")
 endif
 
 " Use Ack instead of Grep when available
-  "set grepprg=ack\ -H\ --nogroup\ --nocolor\ --ignore-dir=tmp\ --ignore-dir=coverage
-  set grepprg=ack
+"set grepprg=ack\ -H\ --nogroup\ --nocolor\ --ignore-dir=tmp\ --ignore-dir=coverage
+set grepprg=ack
 
 " Color scheme
 set background=dark
@@ -162,6 +163,10 @@ set clipboard=unnamed
 
 "show the 80 char line
 "set colorcolumn=100
+"
+autocmd BufWinEnter,WinEnter * setlocal colorcolumn=80
+autocmd BufWinLeave,WinLeave * setlocal colorcolumn=0
+
 
 "commandt
 let g:CommandTMatchWindowReverse = 1
