@@ -1,5 +1,6 @@
 # ls with colors
 alias ls='ls -G'
+
 # git
 alias gl='git pull'
 alias gp='git push'
@@ -9,9 +10,23 @@ alias gca='git commit -a'
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias grm="git status | grep deleted | awk '{print \$4}' | xargs git rm"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 alias gu='git reset --soft HEAD^'
+alias grp="bundle exec rake && git push"
+alias gci="git pull --rebase && brake && git push"
+alias gcl="git clone"
+alias gd="git diff"
+alias gg="git grep"
+alias amend="git commit --amend"
+
+alias ga="git add"
+alias gai="git add --interactive"
+
+alias gb="git checkout -b"
+alias gc="git checkout"
+alias gs="git st" # Use my alias from ~/.gitconfig
+alias gcm="git commit -m"
 
 #vim
 alias v='/Applications/MacVim.app/Contents/MacOS/Vim'
@@ -28,8 +43,6 @@ alias tls='tmux ls'
 alias tn='tmux new -s'
 alias ta='tmux attach -t'
 
-
-
 #git
 function g {
   if [[ $# > 0 ]]; then
@@ -39,20 +52,6 @@ function g {
   fi
 }
 compdef g=git
-alias grp="bundle exec rake && git push"
-alias gci="git pull --rebase && brake && git push"
-alias gcl="git clone"
-alias gd="git diff"
-alias gg="git grep"
-alias amend="git commit --amend"
-
-alias ga="git add"
-alias gai="git add --interactive"
-
-alias gb="git checkout -b"
-alias gc="git checkout"
-alias gs="git st" # Use my alias from ~/.gitconfig
-alias gcm="git commit -m"
 
 
 alias cssh="ssh -p 2436 draper@206.217.197.129"
