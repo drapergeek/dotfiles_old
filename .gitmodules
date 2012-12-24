@@ -1,6 +1,0 @@
-[submodule "vim/plugin/greplace.vim"]
-	path = vim/plugin/greplace.vim
-	url = git://github.com/skwp/greplace.vim.git
-[submodule "vim/bundle/puppet"]
-	path = vim/bundle/puppet
-	url = git://github.com/rodjek/vim-puppet.git
