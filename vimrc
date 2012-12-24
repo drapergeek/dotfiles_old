@@ -115,11 +115,6 @@ set grepprg=ack
 " Color scheme
 set background=dark
 colorscheme jellybeans
-"colorscheme wombat
-"colorscheme vibrantchalk
-
-"highlight NonText guibg=#060606
-"highlight Folded  guibg=#0A0A0A guifg=#9090D0
 set t_Co=256
 
 " Numbers
@@ -127,7 +122,7 @@ set number
 set numberwidth=5
 
 " Snippets are activated by Shift+Tab
-let g:snippetsEmu_key = "<S-Tab>"
+"let g:snippetsEmu_key = "<S-Tab>"
 
 " Tab completion options
 " (only complete to the longest unambiguous match, and show a menu)
@@ -146,19 +141,6 @@ set tags=./tags;
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
-" Open URL
-"command -bar -nargs=1 OpenURL :!open <args>
-"function! OpenURL()
-"  let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;:]*')
-"  echo s:uri
-"  if s:uri != ""
-"    exec "!open \"" . s:uri . "\""
-"  else
-"    echo "No URI found in line."
-"  endif
-"endfunction
-"map <Leader>w :call OpenURL()<CR>
-
 "Mapping to be able to copy and paste:
 set clipboard=unnamed
 
@@ -167,7 +149,6 @@ set clipboard=unnamed
 "
 autocmd BufWinEnter,WinEnter * setlocal colorcolumn=80
 autocmd BufWinLeave,WinLeave * setlocal colorcolumn=0
-
 
 "commandt
 let g:CommandTMatchWindowReverse = 1
