@@ -31,11 +31,12 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 
 "My Bundles
+Bundle 'git://github.com/rodjek/vim-puppet.git'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-rails'
 Bundle 'kien/ctrlp.vim'
