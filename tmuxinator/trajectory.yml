@@ -1,0 +1,11 @@
+# ~/.tmuxinator/trajectory.yml
+# you can make as many tabs as you wish...
+
+project_name: trajectory
+project_root: ~/Dropbox/Development/trajectory
+tabs:
+  - editor:
+      layout: main-vertical
+      panes:
+        - v .
+  - shell: git pull
