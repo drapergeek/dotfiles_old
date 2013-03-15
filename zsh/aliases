@@ -24,7 +24,6 @@ alias ga="git add"
 alias gai="git add --interactive"
 
 alias gb="git checkout -b"
-alias gc="git checkout"
 alias gs="git st" # Use my alias from ~/.gitconfig
 alias gcm="git commit -m"
 
@@ -55,3 +54,5 @@ compdef g=git
 
 
 alias cssh="ssh -p 2436 draper@206.217.197.129"
+
+alias updatecc="git checkout local && git fetch upstream && git merge upstream/local && git push && git checkout - && git rebase local"
