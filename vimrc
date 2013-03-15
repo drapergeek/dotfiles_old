@@ -34,6 +34,11 @@ call vundle#rc()
 " required!
 Bundle 'gmarik/vundle'
 
+" Persisted undo
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
+
 
 "My Bundles
 Bundle 'git://github.com/rodjek/vim-puppet.git'
