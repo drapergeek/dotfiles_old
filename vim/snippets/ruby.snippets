@@ -43,8 +43,12 @@ snippet if
 		${2}
 	end
 snippet it
-	it "${1:scenario}" do
+	it '${1:scenario}' do
 		${2:code...}
+	end
+snippet desc
+	describe '${1:method}' do
+	${2}
 	end
 snippet ife
 	if ${1:condition}
