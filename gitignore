@@ -25,3 +25,5 @@ vim/bundle/Command-T/ruby/command-t/*.o
 bundler_binstubs/
 
 tags
+.rbenv-vars
+.powrc
